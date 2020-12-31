@@ -1,0 +1,77 @@
+邮箱：https://mail.newland.com.cn/  wu.zf@newland.com.cn  mima:wzf.123?  新的：w?J?r?fe12
+
+https://10.32.146.70/signup_user_complete/?id=kudwqoeoj3bnpxosrb8xn6hqiw
+
+mattermost 用户名wu.zf@newland.com.cn   mima:wuzhongfei?
+无线网：
+账号tx-wifi
+密码：tongxin@123
+vpn：
+账号：tongxin
+密码：xqAetZoMU8PymFJb
+新大陆Git账号/密码： wu.zf@newland.com.cn /  wu2509531823
+ 
+ip:172.32.149.72
+默认网关：172.32.149.236
+外网代理：172.32.149.253:3128
+
+ruanjiangongsi OA: 10.1.4.252/nloa  用户名：09965 mima:Jack123456
+新大陆 OA: https://oa.newland.com.cn  用户名：wu.zf mima:wzf.123?
+
+蓝湖：
+童新：tongx@newland.com.cn  /  tx123456
+
+
+账号：09965
+密码：12345678
+
+禅道：
+http://172.32.149.214:8888/zentao/user-login-L3plbnRhby9wcm9qZWN0LXRhc2stNzg1LXVuY2xvc2VkLTAtaWRfZGVzYy5odG1s.html
+用户名：wuzhf
+密码：wzf@123456
+
+SVN账号：wu.zf 密码：1nj3iF*erq
+ICMS账号：7216 密码：Jj5%TTWkZW
+
+
+
+大屏远程桌面：http://10.32.146.110:7084/bigscreen/index/toPcIndex.do
+
+无线：
+tx-wifi
+tongxin@123
+
+常州代理 https://202.102.102.70/por/service.csp?rnd=obmhmlagjkfendgh
+
+模拟csrf攻击；
+webpack
+
+
+一个项目嵌入到别人系统里
+
+
+tongxin@123
+
+指标中心新地址，不包含；svn : http://172.32.147.193:8081/svn/BAS_CODE/trunk/BigData_code/target_center
+
+ 数据中心：
+ 测试环境部署
+ 用户名：root 密码 root123.  端口：22
+ 路径：/disk01/install/front
+http://172.32.148.75:81/jsui/
+
+
+
+解决编译太慢的问题
+npm install babel-plugin-dynamic-import-node
+
+
+如果轮播图下，小分类下的页面不同，则用template/TabsPage；
+
+如果轮播图下，小分类下的页面相同，则用template/SwiperPage；
+如果轮播图下，没有小分类，则直接写轮播图组件路径
+ 采购：矿、煤、废钢等公用PurchaseOverview，是因为他们都有采购计划、库存总览等
+ 
+
+
+ 
