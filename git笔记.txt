@@ -1,1 +1,18 @@
 #TortoiseGit创建本地库并提交至远程服务器（包括分支） https://blog.csdn.net/yang_yangyang/article/details/89377996
+
+#代码合并：Merge、Rebase的选择  https://blog.csdn.net/fybon/article/details/52460516
+git rebase master  把当前分支与master分支作rebase操作,将当前分支的修改合并到master分支的后面，记住：rebase谁，就是把当前分支合并到谁的后面
+如果master中新的提交和你的工作是相关的。为了将新的提交并入你的分支，你有两个选择：merge或rebase。
+Rebase的黄金法则
+当你理解rebase是什么的时候，最重要的就是什么时候 不能 用rebase。git rebase 的黄金法则便是，绝不要在公共的分支上使用它。
+
+
+
+
+
+#git 常用命令：
+Merge
+将master分支合并到feature分支最简单的办法就是用下面这些命令：
+git checkout feature 
+git merge master   
+或者，你也可以把它们压缩在一行里。 git merge master feature
