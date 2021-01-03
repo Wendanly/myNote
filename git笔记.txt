@@ -17,3 +17,5 @@ git checkout feature
 git merge master   
 或者，你也可以把它们压缩在一行里。 git merge master feature
 
+git remote update origin --prune   git 更新远程分支 
+
