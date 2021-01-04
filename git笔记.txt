@@ -6,7 +6,7 @@ git rebase master  把当前分支与master分支作rebase操作,将当前分支
 Rebase的黄金法则
 当你理解rebase是什么的时候，最重要的就是什么时候 不能 用rebase。git rebase 的黄金法则便是，绝不要在公共的分支上使用它。
 
-
+#GitHub 的 Pull Request 是指什么意思？zhihu.com/question/21682976  仔细看，讲得很形象
 
 
 
