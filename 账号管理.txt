@@ -9,7 +9,8 @@ mattermost 用户名wu.zf@newland.com.cn   mima:wuzhongfei?
 vpn：
 账号：tongxin
 密码：xqAetZoMU8PymFJb
-新大陆Git账号/密码： wu.zf@newland.com.cn /  wu2509531823
+新大陆Git  http://172.32.149.204/gitlab/wu.zf
+账号/密码： wu.zf@newland.com.cn /  wu2509531823
  
 ip:172.32.149.72
 默认网关：172.32.149.236
@@ -42,14 +43,6 @@ tx-wifi
 tongxin@123
 
 常州代理 https://202.102.102.70/por/service.csp?rnd=obmhmlagjkfendgh
-
-模拟csrf攻击；
-webpack
-
-
-一个项目嵌入到别人系统里
-
-
 tongxin@123
 
 指标中心新地址，不包含；svn : http://172.32.147.193:8081/svn/BAS_CODE/trunk/BigData_code/target_center
@@ -64,10 +57,3 @@ http://172.32.148.75:81/jsui/
 
 解决编译太慢的问题
 npm install babel-plugin-dynamic-import-node
-
-
-如果轮播图下，小分类下的页面不同，则用template/TabsPage；
-
-如果轮播图下，小分类下的页面相同，则用template/SwiperPage；
-如果轮播图下，没有小分类，则直接写轮播图组件路径
- 采购：矿、煤、废钢等公用PurchaseOverview，是因为他们都有采购计划、库存总览等
