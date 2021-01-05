@@ -71,7 +71,3 @@ npm install babel-plugin-dynamic-import-node
 如果轮播图下，小分类下的页面相同，则用template/SwiperPage；
 如果轮播图下，没有小分类，则直接写轮播图组件路径
  采购：矿、煤、废钢等公用PurchaseOverview，是因为他们都有采购计划、库存总览等
- 
- 是
-是发的是fsdf
- 度过发的放爱的光度法gadfly第三方胜多负少是的方式
