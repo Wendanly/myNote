@@ -54,11 +54,4 @@ tongxin@123
 http://172.32.148.75:81/jsui/
 
 
-
-解决编译太慢的问题
-npm install babel-plugin-dynamic-import-node
-大概地方 个
-2
-3
-dev1==4
-dev1==5 
+dev1#1
