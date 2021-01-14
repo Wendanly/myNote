@@ -43,6 +43,7 @@ tx-wifi
 tongxin@123
 
 常州代理 https://202.102.102.70/por/service.csp?rnd=obmhmlagjkfendgh
+用户名：XDL002
 tongxin@123
 
 指标中心新地址，不包含；svn : http://172.32.147.193:8081/svn/BAS_CODE/trunk/BigData_code/target_center
@@ -53,10 +54,3 @@ tongxin@123
  路径：/disk01/install/front
 http://172.32.148.75:81/jsui/
 
-
-开始
-dev#1
-dev#2
-master#1
-master#2
-master#3
