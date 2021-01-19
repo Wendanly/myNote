@@ -158,3 +158,4 @@ qs.stringify() 传数组时要先把数组转成字符串，JSON.stringify(arr)
 #webpack学习
 
 #window.open() 在新框口中拥有相同的sessionStorage等本地存储
+#vue中 window.open跳转带参数 https://blog.csdn.net/weixin_42418774/article/details/103613708
