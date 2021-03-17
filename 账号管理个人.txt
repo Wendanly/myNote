@@ -1,0 +1,2 @@
+天气网：账号：密码：appid=93593834&appsecret=BCnOXG4n
+"https://www.tianqiapi.com/api/?version=v6&appid=93593834&appsecret=BCnOXG4n"

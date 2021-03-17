@@ -55,4 +55,12 @@ tongxin@123
 http://172.32.148.75:81/jsui/
 
 
+标签管理测试环境部署：
+目录：/disk01/dmp-paas/base-label-ui/baselabelui
+172.32.148.70
+root
+root123.
+22
+
+
 

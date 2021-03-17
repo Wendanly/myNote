@@ -159,3 +159,23 @@ qs.stringify() 传数组时要先把数组转成字符串，JSON.stringify(arr)
 
 #window.open() 在新框口中拥有相同的sessionStorage等本地存储
 #vue中 window.open跳转带参数 https://blog.csdn.net/weixin_42418774/article/details/103613708
+#js中使用 && 实现 if 判断  https://www.cnblogs.com/fm060/p/11671764.html
+$step < 1 && $step = 5;
+ 
+等于
+ 
+if($step < 1) {
+    $step = 5;
+}
+Tip：无法使用return ，且比三目运算符少一个“为假”的条件
+#vue中的watch监听：
+如果activeData.__config__.label 与activeId 连续被更改，则他们在watch里的响应是按照他们在watch里的排序来的，而不是按照他们被更改时的顺序确定的
+# apply,all,bind arguments 区别 https://www.cnblogs.com/binguo666/p/10533733.html
+#Vue 父子组件通信 $attrs及$listeners   inheritAttrs属性使用教程
+https://blog.csdn.net/liangrongliu1991/article/details/100555091?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control
+https://blog.csdn.net/qq_33769914/article/details/87607796?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control
+
+#element table 多表头固定列 fixed 不能一起固定，解决方法：
+https://segmentfault.com/q/1010000023653841
+方法一、给一级加宽度就好了，但要保证这个宽度足够大
+方法二、给一级加宽度，子级也加宽度，子级的宽度和等于小于一级
