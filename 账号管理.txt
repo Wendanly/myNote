@@ -9,9 +9,11 @@ mattermost 用户名wu.zf@newland.com.cn   mima:wuzhongfei?
 vpn：
 账号：tongxin
 密码：xqAetZoMU8PymFJb
+
+=====================
 新大陆Git  http://172.32.149.204/gitlab/wu.zf
 账号/密码： wu.zf@newland.com.cn /  wu2509531823
- 
+=====================================================
 ip:172.32.149.72
 默认网关：172.32.149.236
 外网代理：172.32.149.253:3128
@@ -22,7 +24,7 @@ ruanjiangongsi OA: 10.1.4.252/nloa  用户名：09965 mima:Jack123456
 蓝湖：
 童新：tongx@newland.com.cn  /  tx123456
 
-
+加班申请：
 账号：09965
 密码：12345678
 
@@ -61,6 +63,13 @@ http://172.32.148.75:81/jsui/
 root
 root123.
 22
+
+
+
+
+
+
+
 
 
 

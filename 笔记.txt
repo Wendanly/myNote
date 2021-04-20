@@ -196,6 +196,8 @@ https://blog.csdn.net/weixin_42776111/article/details/108979101
  }
 2、props传对象：
 https://www.cnblogs.com/pangchunlei/p/12110869.html
+#vue样式穿透 ::v-deep的具体使用，三者关系：>>> 、/deep/ 、::v-deep
+https://www.cnblogs.com/aidixie/p/13555680.html
 
 
 
