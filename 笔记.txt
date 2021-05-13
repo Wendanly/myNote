@@ -188,6 +188,7 @@ vuex-persistedstate 与vuex-persist的区别？ https://blog.csdn.net/weixin_443
 1、在对一个 prop 进行“双向绑定,单向修改”的场景下，因为子组件不能直接修改父组件
 https://blog.csdn.net/weixin_42776111/article/details/108979101
 #父组件将age传给子组件并使用.sync修饰符。
+更新基本类型数据时可以用此简便方法
 <MyFooter :age.sync="age">
 </MyFooter>
 //子组件触发事件
@@ -203,8 +204,35 @@ https://blog.csdn.net/qq_43067585/article/details/107554455
 Tips:字符串模板
 #xss攻击 
 https://www.cnblogs.com/goloving/p/14700777.html
-1、v-html与innerHTML相似，会过滤script标签，但无法过滤img标签，所以会有漏洞
+1、v-html与innerHTML相似， v-html指令最终调用的是innerHTML方法，会过滤script标签，但无法过滤img标签，所以会有漏洞
 1、jquery的$().html();不会过滤script和img标签，所以更危险
+#mixins 
+https://www.cnblogs.com/Ivy-s/p/9937173.html
+https://blog.csdn.net/qq_38128179/article/details/107817436  ，里的Mixins合并冲突重点看
+什么时候使用Mixins？
+当我们存在多个组件中的数据或者功能很相近时，我们就可以利用mixins将公共部分提取出来，通过 mixins封装的函数，组件调用他们是不会改变函数作用域外部的。
 
+Tips:
+1、被应用多次时不会被修改，独立的；
+2、data、methods重复时 父组件覆盖子组件；
+3、生命钩子重复时：子组件的先执行，父组件的后执行
+#Vue打包文件放在服务器后，浏览器存在缓存问题
+https://www.cnblogs.com/qiu-Ann/p/11394504.html
 
-
+#自定义组件上使用v-model
+https://www.jianshu.com/p/50ddd91dcbbc
+重点看：model选项，理解该选项的用途,model专门为起别名而定制的一个选项，相当于转接器
+使用场景：改变v-model默认指定的属性value和事件event的名称；
+默认情况下，一个组件上的 v-model 会把 value 用作 prop 且把 input 用作 event，
+model选项就是改变这种默认行为的，比如把自定义的属性 如name 用作prop，和 自定义的updataVal 用作event，
+则结果为：
+model:{
+prop:'name',
+event:'updataVal'
+},
+props:{
+name:{
+type:String,
+default:''
+},
+},
