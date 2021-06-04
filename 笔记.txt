@@ -79,8 +79,14 @@ export function decrypt (msg) {
   var decryptMsg = decrypt.decrypt(msg);
   return decryptMsg;
 }
-#js中6种为真的情况，0、false、''，他们是相等的
-
+#js中6种为真的情况中，0、false、''，他们是相等的，undefined 与null是相等的
+#js中的数据类型https://www.w3school.com.cn/js/js_datatypes.asp
+https://blog.csdn.net/lgno2/article/details/111659563?utm_term=js%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D&utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-0-111659563&spm=3001.4430
+7种基本数据类型；number,boolean,undefined,string,null,symbol,bigint
+1种引用类型：object,
+其中：null,对象，数组为object类型;函数为function
+# isNaN的理解：https://www.cnblogs.com/fmyao/p/12560182.html
+isNaN() 是一个全局方法，它的作用是检查一个值是否能被 Number() 成功转换 。 如果能转换成功，就返回 false，否则返回 true 。
 #谷歌调试小技巧 https://blog.csdn.net/wonxxx/article/details/51902986
 
 #文件上传方式：
@@ -236,3 +242,12 @@ type:String,
 default:''
 },
 },
+#vue 组件嵌套多层的解决方法：
+provide inject 
+https://segmentfault.com/a/1190000021216039
+https://zhuanlan.zhihu.com/p/107819097 与mixin 的区别
+
+#懒加载import与require https://www.cnblogs.com/xiaomili/p/10779827.html
+使用路由懒加载的写法，只会在进入当前这个路由时候才会走 component 
+组件懒加载：
+https://www.jb51.net/article/162858.htm
