@@ -251,3 +251,19 @@ https://zhuanlan.zhihu.com/p/107819097 与mixin 的区别
 使用路由懒加载的写法，只会在进入当前这个路由时候才会走 component 
 组件懒加载：
 https://www.jb51.net/article/162858.htm
+#npm 和 npx 有什么区别？https://www.zhihu.com/question/327989736/answer/787995048
+可以直接寻址，不需要进入到目录里
+#前端为什么要起服务https://blog.csdn.net/youyuliu/article/details/82598399
+https://www.cnblogs.com/suoking/p/10544332.html
+为什么浏览器要限制跨域访问? https://www.zhihu.com/question/26379635  
+#nginx 跨域原理，https://segmentfault.com/a/1190000022415375
+使用Nginx端口转发，本质上就是：让浏览器认为前台和后台是同一个域，就不会产生跨域请求。
+nginx转发给其他服务时不会产生跨域问题，跨域只是针对浏览器，而不针对nginx服务器
+开发者事先约定好，根据不同的请求地址，来访问不同的服务器。
+Nginx接收到数据之后，根据地址，转发给相应的服务器来处理。
+如果需要另外安排其他的服务，来实现文件上传功能的话，只需要把URL处理一下，加上不同的前缀即可。
+#为什么form表单提交没有跨域问题，但ajax提交有跨域问题？https://www.zhihu.com/question/31592553
+传统form表单提交浏览器会发生跳转，这种并不能叫跨域啊！那我还想问为什么a标签跳转到别的域名不存在跨域呢？
+
+
+http://jsonplaceholder.typicode.com/posts
