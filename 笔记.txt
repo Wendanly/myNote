@@ -263,7 +263,7 @@ nginx转发给其他服务时不会产生跨域问题，跨域只是针对浏览
 Nginx接收到数据之后，根据地址，转发给相应的服务器来处理。
 如果需要另外安排其他的服务，来实现文件上传功能的话，只需要把URL处理一下，加上不同的前缀即可。
 #为什么form表单提交没有跨域问题，但ajax提交有跨域问题？https://www.zhihu.com/question/31592553
-传统form表单提交浏览器会发生跳转，这种并不能叫跨域啊！那我还想问为什么a标签跳转到别的域名不存在跨域呢？
-
-
-http://jsonplaceholder.typicode.com/posts
+传统form表单提交浏览器会发生跳转，form是标签，不是js脚本，这种并不能叫跨域啊！那我还想问为什么a标签跳转到别的域名不存在跨域呢？
+#本地启动服务方法：
+1、http-server，安装npm http-server，启动； npx http-server -c-1 --proxy http://www.baidu.com。参见：https://blog.csdn.net/weixin_45029879/article/details/108296329
+2、webpaclk-dev-server,安装:(1)webpack-dev-server@2只支持webpack@3及之前版本，安装步骤：npm i webpack@3 webpack-dev-server@2 -D，启动：npx webpack-dev-server
