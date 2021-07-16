@@ -36,7 +36,8 @@ http://172.32.149.214:8888/zentao/user-login-L3plbnRhby9wcm9qZWN0LXRhc2stNzg1LXV
 SVN账号：wu.zf 密码：1nj3iF*erq
 ICMS账号：7216 密码：Jj5%TTWkZW
 
-
+加班：http://10.32.146.5:8888/overtime/index.do
+账号：09965 密码：123654
 
 大屏远程桌面：http://10.32.146.110:7084/bigscreen/index/toPcIndex.do
 
@@ -57,12 +58,17 @@ tongxin@123
 http://172.32.148.75:81/jsui/
 
 
-标签管理测试环境部署：
-目录：/disk01/dmp-paas/new-label-ui/newlabelui
+70主机：
 172.32.148.70
 root
 root123.
 22
+标签管理测试环境部署：
+目录：/disk01/dmp-paas/new-label-ui/newlabelui
+
+iop测试环境部署：
+目录：/disk01/twoll/twoll_web
+
 
 
 

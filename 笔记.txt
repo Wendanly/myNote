@@ -253,7 +253,8 @@ https://zhuanlan.zhihu.com/p/107819097 与mixin 的区别
 https://www.jb51.net/article/162858.htm
 #npm 和 npx 有什么区别？https://www.zhihu.com/question/327989736/answer/787995048
 可以直接寻址，不需要进入到目录里
-#前端为什么要起服务https://blog.csdn.net/youyuliu/article/details/82598399
+#前端为什么要起服务
+https://blog.csdn.net/youyuliu/article/details/82598399
 https://www.cnblogs.com/suoking/p/10544332.html
 为什么浏览器要限制跨域访问? https://www.zhihu.com/question/26379635  
 #nginx 跨域原理，https://segmentfault.com/a/1190000022415375
@@ -266,4 +267,14 @@ Nginx接收到数据之后，根据地址，转发给相应的服务器来处理
 传统form表单提交浏览器会发生跳转，form是标签，不是js脚本，这种并不能叫跨域啊！那我还想问为什么a标签跳转到别的域名不存在跨域呢？
 #本地启动服务方法：
 1、http-server，安装npm http-server，启动； npx http-server -c-1 --proxy http://www.baidu.com。参见：https://blog.csdn.net/weixin_45029879/article/details/108296329
-2、webpaclk-dev-server,安装:(1)webpack-dev-server@2只支持webpack@3及之前版本，安装步骤：npm i webpack@3 webpack-dev-server@2 -D，启动：npx webpack-dev-server
+2、webpaclk-dev-server,安装:(1)webpack-dev-server@2只支持webpack@3及之前版本，安装步骤：npm i webpack@3 webpack-dev-server@2 -D，启动：npx webpack-dev-server，然后在webpack.config.js中配置devServer项
+#exports与module.exports 区别https://www.zhihu.com/question/26621212
+不要给exports直接赋值 ，如：exports = {name:232}，因为此时exports就不是指向module.exports了，此时通过require() 引入时就会出错，所以只能exports.属性名 = 值，这种
+
+#在html中使用es6规范，export、import  http://www.zyiz.net/tech/detail-145950.html，在script上加个type='module'
+
+#@vue/cli-plugin-babel与 @vue/babel-preset-app 的关系 https://www.zhihu.com/question/370689302
+@vue/cli-plugin-babel 文档里提到了集成了 @vue/babel-preset-app，@vue/babel-preset-app 文档里提到了集成了 babel-preset-env 这个 babel preset，preset-env
+ 会基于你的浏览器目标自动决定要运用的语法转换和 polyfill。
+ 
+#Vue的路由实现原理：hash模式 和 history模式区别
