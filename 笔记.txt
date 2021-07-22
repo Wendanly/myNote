@@ -248,7 +248,8 @@ https://segmentfault.com/a/1190000021216039
 https://zhuanlan.zhihu.com/p/107819097 与mixin 的区别
 
 #懒加载import与require https://www.cnblogs.com/xiaomili/p/10779827.html
-使用路由懒加载的写法，只会在进入当前这个路由时候才会走 component 
+使用路由懒加载的写法，可以把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应组件，起到项目优化作用，
+若不使用懒加载，则页面加载后，network里始终是两个文件：app.js 与chunk-venders.js，这两个文件在运行项目时就会加载，里面包含了整个项目的组件，比如整个项目的大小是8M,则一开始就下载8M
 组件懒加载：
 https://www.jb51.net/article/162858.htm
 #npm 和 npx 有什么区别？https://www.zhihu.com/question/327989736/answer/787995048
@@ -278,3 +279,8 @@ Nginx接收到数据之后，根据地址，转发给相应的服务器来处理
  会基于你的浏览器目标自动决定要运用的语法转换和 polyfill。
  
 #Vue的路由实现原理：hash模式 和 history模式区别
+
+#资源预加载preload和资源预读取prefetch简明学习https://www.cnblogs.com/xiaohuochai/p/9183874.html
+preload如果忽略 as 属性，或者错误的 as 属性会使 preload 等同于 XHR 请求，浏览器不知道加载的是什么，因此会赋予此类资源非常低的加载优先级
+
+#Vue组件懒加载(异步延迟加载和彻底懒加载)	https://zhuanlan.zhihu.com/p/147922995
