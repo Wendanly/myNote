@@ -5,7 +5,7 @@
 
 #vue.config.js 
 1、代理的意思：https://blog.csdn.net/iteye_10432/article/details/103757786
-proxy('/label', {...}) - 匹配以/api开始的路径，显然那些.JS、.css的文件就被顾虑掉了，只剩下前端调api请求接口的路径了，如：/label/sysManage/addApi.do
+proxy('/label', {...}) - 匹配以/api开始的路径，显然那些.JS、.css的文件就被顾虑掉了，因为这些文件的名字不是以label开头的，只剩下前端调api请求接口的路径了，如：/label/sysManage/addApi.do
   proxy: {
       '/label': { 
         target: 'http://localhost:18989', // 后端域名及端口（端口后面也可以添加路径），若不考虑pathRewrite字段，则此时的请求路径是http://localhost:18989/label/sysManage/addApi.do
@@ -163,8 +163,6 @@ qs.stringify() 传数组时要先把数组转成字符串，JSON.stringify(arr)
 
 #webpack学习
 
-#window.open() 在新框口中拥有相同的sessionStorage等本地存储
-#vue中 window.open跳转带参数 https://blog.csdn.net/weixin_42418774/article/details/103613708
 #js中使用 && 实现 if 判断  https://www.cnblogs.com/fm060/p/11671764.html
 $step < 1 && $step = 5;
  
@@ -193,8 +191,8 @@ vuex-persistedstate 与vuex-persist的区别？ https://blog.csdn.net/weixin_443
 #props传基本类型与对象类型的区别：
 1、在对一个 prop 进行“双向绑定,单向修改”的场景下，因为子组件不能直接修改父组件
 https://blog.csdn.net/weixin_42776111/article/details/108979101
-#父组件将age传给子组件并使用.sync修饰符。
-更新基本类型数据时可以用此简便方法
+#父组件将age传给子组件并使用.sync修饰符。 
+更新基本类型数据时可以用此简便方法!!!!!!
 <MyFooter :age.sync="age">
 </MyFooter>
 //子组件触发事件
@@ -211,6 +209,8 @@ Tips:字符串模板
 #xss攻击 
 https://www.cnblogs.com/goloving/p/14700777.html
 1、v-html与innerHTML相似， v-html指令最终调用的是innerHTML方法，会过滤script标签，但无法过滤img标签，所以会有漏洞
+如：const name = "<img src='x' onerror='alert(1)'>";
+el.innerHTML = name; // shows the alert
 1、jquery的$().html();不会过滤script和img标签，所以更危险
 #mixins 
 https://www.cnblogs.com/Ivy-s/p/9937173.html
@@ -222,6 +222,7 @@ Tips:
 1、被应用多次时不会被修改，独立的；
 2、data、methods重复时 父组件覆盖子组件；
 3、生命钩子重复时：子组件的先执行，父组件的后执行
+
 #Vue打包文件放在服务器后，浏览器存在缓存问题
 https://www.cnblogs.com/qiu-Ann/p/11394504.html
 
@@ -242,7 +243,7 @@ type:String,
 default:''
 },
 },
-#vue 组件嵌套多层的解决方法：
+#vue 组件嵌套多层时，访问上层组件的方法或者属性时的解决方法：
 provide inject 
 https://segmentfault.com/a/1190000021216039
 https://zhuanlan.zhihu.com/p/107819097 与mixin 的区别
@@ -269,6 +270,25 @@ Nginx接收到数据之后，根据地址，转发给相应的服务器来处理
 #本地启动服务方法：
 1、http-server，安装npm http-server，启动； npx http-server -c-1 --proxy http://www.baidu.com。参见：https://blog.csdn.net/weixin_45029879/article/details/108296329
 2、webpaclk-dev-server,安装:(1)webpack-dev-server@2只支持webpack@3及之前版本，安装步骤：npm i webpack@3 webpack-dev-server@2 -D，启动：npx webpack-dev-server，然后在webpack.config.js中配置devServer项
+
+#从头开始搭建一个webpack打包项目
+https://www.runoob.com/w3cnote/webpack-tutorial.html
+https://blog.csdn.net/weixin_43684713/article/details/92839419
+https://blog.csdn.net/qq_40241957/article/details/98937736 开启本地服务器，重点看 下面的内容很重要
+注意：你启动webpack-dev-server后，你在目标文件夹中是看不到编译后的文件的,实时编译后的文件都保存到了内存当中。
+因此很多同学使用webpack-dev-server进行开发的时候都看不到编译后的文件
+#webpack中的mode 设置的process.env.NODE_ENV 与node自身的process.env.NODE_ENV的区别；https://www.jianshu.com/p/e3f6c0e0c6c8
+以webpack@4为分界线，4之前想要在全项目中使用process.env.NODE_ENV比较费事，但4以后 会比较方便。目前可以在vuecli全项目里使用process.env.NODE_ENV 是因为vuecli已经在webpack的DefinePlugin中集成里这个变量，使其可以在全项目随意使用，
+实际上在node只有process.env，并没有process.env.NODE_ENV 。
+https://www.cnblogs.com/usebtf/p/9912413.html
+https://www.cnblogs.com/natsu07/p/12294940.html 这个不错，可以分环境增加自定义变量
+https://blog.csdn.net/caosiyuan1991/article/details/115314168 webpack4的process.env.NODE_ENV配置，重点看，关键点在下方
+tip：如果没有在脚本中设置环境变量，只设置了mode，在webpack的配置文件中读取process.env.NODE_ENV为undefined
+https://www.cnblogs.com/fe-linjin/p/11963765.html 关于 mode:'production' 与mode:'development'的讲解
+#https://blog.csdn.net/ymwwow/article/details/90141964 
+webpack5 webpack-dev-server 服务开启后index.html模板放在public下面所以要新建一个public文件夹并新建一个index.html文件，
+此时http://localhost:端口展示的根目录是public，所以 index.html要建在这里
+#当看不懂时搜一下wepack-dev-server  new htmlWebpackPlugin() 这两个关系
 #exports与module.exports 区别https://www.zhihu.com/question/26621212
 不要给exports直接赋值 ，如：exports = {name:232}，因为此时exports就不是指向module.exports了，此时通过require() 引入时就会出错，所以只能exports.属性名 = 值，这种
 
@@ -279,8 +299,73 @@ Nginx接收到数据之后，根据地址，转发给相应的服务器来处理
  会基于你的浏览器目标自动决定要运用的语法转换和 polyfill。
  
 #Vue的路由实现原理：hash模式 和 history模式区别
+history 模式不能使用相对路径部署publicPath,详情见官网
 
 #资源预加载preload和资源预读取prefetch简明学习https://www.cnblogs.com/xiaohuochai/p/9183874.html
 preload如果忽略 as 属性，或者错误的 as 属性会使 preload 等同于 XHR 请求，浏览器不知道加载的是什么，因此会赋予此类资源非常低的加载优先级
 
 #Vue组件懒加载(异步延迟加载和彻底懒加载)	https://zhuanlan.zhihu.com/p/147922995
+#Vue中 Vue.extend() 详解及使用 https://blog.csdn.net/ZYS10000/article/details/107477418
+最大作用：可以动态渲染，而不需要事先定义好模板
+tip:不事先定义好模板放在页面中而实现动态加载dom到body里的的方法不只有vue.extend()，也可以使用js原生方法创建html，并添加事件
+利用vue.extend() 做一个动态确认框，
+#vue.use 和 vue.prototype 挂载的区别 https://blog.csdn.net/ZengYue_D/article/details/116303597?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control
+1、vue.use( xxx ) 是挂载 用 vue 的函数编写的 方法/命令/模板/插件 等函数，供框架使用
+被引入的 js 文件 必暴露 install 方法
+2、vue.prototype.$xxx 为了挂载任何想在全局频繁调用的 js 函数/对象
+#axios 请求时提示输入用户名，原因可能是传参方式问题，如 post请求方式却传了params
+
+#slice 对于基本类型的数组是深拷贝，对于复杂类型的数组是浅拷贝
+
+
+# for、forEach、map、for...in、for...of的区别以及能否终止循环的总结
+https://www.cnblogs.com/liujiekun/p/11365538.html
+for , for in , for of break  continue都可以用
+map 与forEach  break  continue都不可以用，只能用return结束本次循环
+
+#分辨率问题，
+屏幕分辨率与物理分辨率：
+物理分辨率是固定的，出厂后已经不会改变了，比如：1366*768，
+一张图片最终展示的分辨率是由屏幕分辨率与物理分辨率决定的，屏幕分辩率是在物理分辩率不变的情况下再次划分的，只能往低处化，不能往高处划，因为到物理分辨率的极限了，不可再分割了
+
+##vue-cli3创建的项目中，默认集成的 webpack 配置 https://blog.csdn.net/senmage/article/details/105392947
+
+##css变量与函数--var()
+
+https://blog.csdn.net/DZY_12/article/details/111993128 两种方式创建与使用css变量( css方式与js方式)
+:root{
+--bg-color:blue;
+}
+///某style文件中
+.div {
+color:var(--bg-color)
+}
+https://www.cnblogs.com/WQLong/p/7792174.html 解释了为什么使用 --开头定义css变量
+## scss
+https://www.cnblogs.com/fayin/p/10510760.html  如何设置 sass 全局变量，js如何使用 sass 变量，css如何设置scss变量
+样式中使用scss变量：
+（1）、样式中使用scss变量有两种方式，1、把 导入变量所在的文件，加载进来 然后使用；
+如：@import "~@/assets/styles/mixin.scss"; 
+使用：.div{
+color:$--bg-color;
+}
+
+（2）、使用sass-resources-loader将 sass 资源自动导入每个所需的 sass 模块因此，您可以在所有 sass 样式中使用共享变量和mixin，
+而无需在每个文件中手动导入它们。
+js中使用scss变量：先将在scss文件的变量导出，:export {},然后在通过 import 导入样式文件，取出样式object
+#在已集成了相关配置的webpack.config.js中（如：vuecli3,vuecli4）中如何使用 scss 全局变量
+https://imisu.blog.csdn.net/article/details/108404162 设置后就可以在所有 sass 样式中使用共享变量和mixin，
+而无需在每个文件中手动导入它们。
+
+
+###css Module 分析https://segmentfault.com/a/1190000015738767?utm_source=tag-newest
+
+##引入的字体文件过大处理方法
+原理：通过这个插件，把需要设置的字体放在这个插件里，填入文件来源路径（就是那个很大的字体文件位置），在填入输出路径（压缩后的文件输出位置），然后引用
+这个压缩后的文件（该文件是个css,ttf,eot等文件）就好了，然后在需要使用的地方引入字体就行，一般用类名包一下，如：.newfont { font-family:'压缩后字体名称'}
+参考：https://www.cnblogs.com/yuqing6/p/8934531.html
+
+##webpack 打包性能优化https://segmentfault.com/a/1190000022205477
+
+
+
