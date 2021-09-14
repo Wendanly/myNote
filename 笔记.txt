@@ -195,6 +195,7 @@ https://blog.csdn.net/weixin_42776111/article/details/108979101
 更新基本类型数据时可以用此简便方法!!!!!!
 <MyFooter :age.sync="age">
 </MyFooter>
+
 //子组件触发事件
  mounted () {
     console.log(this.$emit('update:age',1234567));
