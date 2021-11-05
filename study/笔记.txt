@@ -368,5 +368,9 @@ https://imisu.blog.csdn.net/article/details/108404162 设置后就可以在所�
 
 ##webpack 打包性能优化https://segmentfault.com/a/1190000022205477
 
+##chrome禁止三方cookie，网站登录不了怎么办
+https://blog.csdn.net/sD7O95O/article/details/108819467?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3.no_search_link
+通过nginx入手
+https://blog.csdn.net/qq_35611143/article/details/119930056?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.no_search_link&spm=1001.2101.3001.4242
 
-
+# 有的网站可以被iframe嵌入，有的不可以，不知为什么？？
