@@ -153,7 +153,15 @@ https://blog.csdn.net/qq_36671474/article/details/100545250
 https://blog.csdn.net/qq_42553082/article/details/84072301
 https://segmentfault.com/a/1190000018774494
 
-qs.stringify() 传数组时要先把数组转成字符串，JSON.stringify(arr)
+qs.stringify() 传数组时要先把数组转成字符串，JSON.stringify(arr)，
+qs.stringify() 作用是参数序列化，如：
+let params = {
+name:'wzf',
+sex:'nan'
+};
+
+let dd = qs.stringify(params);
+则dd为 name='wzf'&sex='nan'
 
 
 #splice用法：
@@ -328,6 +336,8 @@ map 与forEach  break  continue都不可以用，只能用return结束本次循�
 屏幕分辨率与物理分辨率：
 物理分辨率是固定的，出厂后已经不会改变了，比如：1366*768，
 一张图片最终展示的分辨率是由屏幕分辨率与物理分辨率决定的，屏幕分辩率是在物理分辩率不变的情况下再次划分的，只能往低处化，不能往高处划，因为到物理分辨率的极限了，不可再分割了
+dpr  = 物理分辨率/屏幕分辨率
+屏幕分辨率 可以通过缩放改变，从而导致dpr的改变
 
 ##vue-cli3创建的项目中，默认集成的 webpack 配置 https://blog.csdn.net/senmage/article/details/105392947
 
@@ -373,5 +383,21 @@ https://imisu.blog.csdn.net/article/details/108404162 设置后就可以在所�
 任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。那么12px=0.75em,10px=0.625em。为了简化font-size的换算，
 需要在css中的body选择器中声明Font-size=62.5%，这就使em值变为 16px*62.5%=10px, 这样12px=1.2em, 10px=1em,
 也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了。
+
+##pc端适配方案
+https://blog.csdn.net/weixin_42114053/article/details/108572867
+# px转rem ，连同框架里的px都会被转成rem，需要给定一个基准转换大小，可以通过设置某个属性来排除某些文件的单位转换
+1、px2rem-loader 在vuecli2 中的应用方式：https://www.jianshu.com/p/e03c1b1e8777
+2、postcss-px2rem 在vuecli3中的应用方式：https://www.cnblogs.com/lml2017/p/9953429.html
+
+#axios 取消请求 https://blog.csdn.net/qq_33933205/article/details/108127541
+https://zhuanlan.zhihu.com/p/315387105
+Tips:
+至于在取消请求之后再次调用CancelToken.source() 复位的问题，如果不复位的话，下次再发请求的话就会直接取消，因为此时的CancelToken凭证已经被触发，
+想要验证的话可以在请求取消前后查看CancelToken.source()，我们会发现在请求取消后，它的token参数中多了一个reason属性。这就表示请求已经被取消。
+凭证是一次性的，如果发现凭证有reason属性，就表示需要取消请求。所以需要复位。
+后来，我就在思索这个中断请求的原理，本来以为是前端再次向后端发送一个拒收的请求，但是，我打开服务器之后，发现在取消请求的时候并没有再一次收到第二条请求
+，所以，我就怀疑是前端自己直接拒收后端发来的请求。
+
 
 

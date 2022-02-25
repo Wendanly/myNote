@@ -13,3 +13,6 @@ https://blog.csdn.net/sD7O95O/article/details/108819467?utm_medium=distribute.pc
 https://blog.csdn.net/qq_35611143/article/details/119930056?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.no_search_link&spm=1001.2101.3001.4242
 
 # 有的网站可以被iframe嵌入，有的不可以，不知为什么？？
+# 复习background 的各个值
+
+background-origin  padding-box   背景图像相对于内边距（内边距的开始，而不是结束）框来定位
